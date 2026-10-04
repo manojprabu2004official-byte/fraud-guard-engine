@@ -1,0 +1,21 @@
+# Data Processing & Storage
+polars>=0.20.0
+pyarrow>=14.0.0
+
+# Core ML & ONNX Compilation
+numpy>=1.24.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+onnxmltools>=1.12.0
+skl2onnx>=1.16.0
+onnx>=1.15.0
+
+# Low-Latency Inference & Async Streaming
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+onnxruntime>=1.17.0
+confluent-kafka>=2.3.0
+
+# Testing & Utilities
+requests>=2.31.0
