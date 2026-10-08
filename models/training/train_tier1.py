@@ -10,9 +10,14 @@ import onnxmltools
 from onnxmltools.convert.common.data_types import FloatTensorType
 
 
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]  # models/training/train_tier1.py -> project root
+
+
 def train_and_export_tier1(
-    data_path: str = "paysim_cleaned.parquet",
-    model_output_path: str = "models/artifacts/xgboost.onnx"
+    data_path: str = str(PROJECT_ROOT / "data" / "processed" / "paysim_cleaned.parquet"),
+    model_output_path: str = str(PROJECT_ROOT / "models" / "artifacts" / "xgboost.onnx"),
 ):
     os.makedirs(os.path.dirname(model_output_path), exist_ok=True)
 
